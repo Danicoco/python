@@ -5,7 +5,7 @@ class ShoppingCart(object):
         self.items = dict()
 
     def add_item(self, item_name, quantity, price):
-        self.total = price * quantity
+        self.total += price * quantity
         self.items[item_name] = quantity
         
     def remove_item(self, item_name, quantity, price):
