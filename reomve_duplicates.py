@@ -1,12 +1,21 @@
-import re
-import itertools
+def remove_duplicates(string):
+    prefix = "abcdefghijklmnopqrstuvwxyz"
+    out = ""
+    dof = ""
+    c = 0
+    if (type(string) == str):
+        for char in string:
+            if char in prefix:
+                c+=1
+            else:
+                c-=1
+    if c== len(string):
+          for i in string:
+              if i not in out:
+                  out += i
+              else:
+                  dof += i
+          return ("".join(sorted(out)), len(dof))
 
 
-def remove_duplicate(string):
-	count = 0
-	search = re.compile(r' [^a-z]').search
-	if not bool(search(string)) == True:
-		for i in range(0,len(string)):
-			if string[i+ 1: i+ 2] == string[i:i+1]:
-				count +=1
-		return (''.join(ch for ch, _ in itertools.groupby(string)), count)
+print remove_duplicates('reesstrf')
