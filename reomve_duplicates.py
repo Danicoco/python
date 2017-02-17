@@ -19,3 +19,5 @@ def remove_duplicates(string):
 
 
 print remove_duplicates('reesstrf')
+
+""Please this code does not pass the test and cannot be submitted. Can you please edit it and help me out"
